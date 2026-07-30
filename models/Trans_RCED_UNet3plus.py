@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from model_framework.SegViT import SegViTBottleneck as transformer
+from models.SegViT import SegViTBottleneck as transformer
 
 
 def get_gn_groups(channels, target_per=16):
