@@ -1,0 +1,44 @@
+paths:
+  annotation_path: /zhongyicheng/Lungs_Segment_Info_Folder/annotations.csv
+  dataset_dir: /zhongyicheng/Lungs_CT_Dataset
+  model_path: /zhongyicheng/models/UNet3_3_rced_segvit.pth
+  npy_dir: /zhongyicheng/Lungs_POS_NPY_25d
+  log_dir: /zhongyicheng/Unet3plus_Log/test_model/UNet3_3_rced_segvit
+early_stopping:
+  patience: 15
+  
+threshold: 0.45
+
+output_weights:
+  - 1
+  - 0.93
+  - 0.82
+  - 0.3
+  - 0.47
+  
+loss:
+  alpha: 0.7
+  beta: 0.3
+  gamma: 2.18
+  weight_adv: 0.00
+
+train:
+  base_ch: 64
+  batch: 4
+  epoch: 500
+  cnn_lr: 0.000194
+  trans_lr: 0.0000308
+  d_lr: 0.000273
+  cnn_weight_decay: 0.0000416
+  trans_weight_decay: 0.0000816
+  negative_ratio: 1.0
+  g_iter: 1
+  d_iter: 1
+  scheduler:
+    factor: 0.5
+    patience: 10
+    threshold: 0.0001
+    min_lr: 0.0000025
+
+batch:
+  accum_steps: 1
