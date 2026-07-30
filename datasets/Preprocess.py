@@ -4,9 +4,9 @@ import os
 import pandas as pd
 from tqdm import tqdm
 
-ANNOTATION_PATH = "/zhongyicheng/Lungs_Segment_Info_Folder/annotations.csv"
-IMG_DIR = "/zhongyicheng/Lungs_CT_Dataset"
-SAVE_DIR = "/zhongyicheng/Lungs_POS_NPY_25d"
+ANNOTATION_PATH = "Lungs_Segment_Info_Folder/annotations.csv"
+IMG_DIR = "Lungs_CT_Dataset"
+SAVE_DIR = "Lungs_POS_NPY_25d"
 os.makedirs(SAVE_DIR, exist_ok=True)
 
 def load_mhd(path: str) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
