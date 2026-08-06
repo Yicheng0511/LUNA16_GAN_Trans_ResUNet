@@ -38,7 +38,7 @@ class ResBlock(nn.Module):
         return out                        
     
     
-class Unet3plus(nn.Module):
+class ResUNet3plus(nn.Module):
     def __init__(self, base_ch: int = 64) -> None:
         super().__init__()
         self.e1 = ResBlock(3, base_ch)
