@@ -37,7 +37,7 @@ if torch.cuda.is_available():
 torch.backends.cudnn.benchmark = True
 torch.cuda.empty_cache()
 
-with open("/zhongyicheng/config.yaml", "r", encoding="utf-8") as file:
+with open("config.yaml", "r", encoding="utf-8") as file:
     config = yaml.load(file, Loader=yaml.FullLoader)
 
 annotation_path: Path = Path(config["paths"]["annotation_path"])
