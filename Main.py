@@ -21,7 +21,7 @@ import albumentations as A
 from albumentations.pytorch import ToTensorV2
 from sklearn.model_selection import train_test_split
 
-from model_framework.Trans_RCED_UNet3plus import Unet3plus as generator
+from model_framework.Trans_ResUNet3plus import ResUNet3plus as generator
 from model_framework.discriminator import ResPatchGANDiscriminator as discriminator
 from datasets.dataset_25d import LungsDataset
 from loss_function.loss import TverskyFocalLoss
